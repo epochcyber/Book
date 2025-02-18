@@ -87,23 +87,43 @@ Host header injection is a type of web vulnerability that involves manipulating 
 
 ### Headers to Change a Location
 ```
-X-Originating-IP: 127.0.0.1
-X-Forwarded-For: 127.0.0.1
-X-Forwarded: 127.0.0.1
-Forwarded-For: 127.0.0.1
-X-Forwarded-Host: 127.0.0.1
-X-Remote-IP: 127.0.0.1
-X-Remote-Addr: 127.0.0.1
-X-ProxyUser-Ip: 127.0.0.1
-X-Original-URL: 127.0.0.1
-Client-IP: 127.0.0.1
-X-Client-IP: 127.0.0.1
-X-Host: 127.0.0.1
-True-Client-IP: 127.0.0.1
-Cluster-Client-IP: 127.0.0.1
-Via: 1.0 fred, 1.1 127.0.0.1
 Connection: close, X-Forwarded-For (Check hop-by-hop headers)
 
+```
+### Host header value
+```
+127.0.0.1
+localhost
+127.0.0.2
+127.0.1.1
+127.1.1.1
+127.255.255.254
+::1
+[::1]
+127.0.0.1:80
+localhost:8080
+0x7f.0x0.0x0.0x1
+2130706433
+0177.0.0.01
+localhost.localdomain
+localhost.lan
+::ffff:127.0.0.1
+::ffff:127.0.0.1
+0x7f.0.0.0x01
+127.0.0x0.01
+127.0x00.00.1
+0b01111111.0b00000000.0b00000000.0b00000001
+127.000.000.001
+127.0000.0000.0001
+127.000000000000.0.1
+127.0.0.000001
+localhost.测试 
+localhost.пример 
+test.internal
+dev.localhost
+myapp.local
+0:0:0:0:0:0:0:1
+0000:0000:0000:0000:0000:0000:0000:0001
 ```
 
 ### **References**
